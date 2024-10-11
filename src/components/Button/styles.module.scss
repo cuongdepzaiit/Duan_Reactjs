@@ -1,0 +1,34 @@
+@import '../../assets/styles/mixin.module';
+@import '../../assets/styles/variable.module';
+
+
+
+.btn {
+    @include btn(160px, 47px, 3px, $primary_color );
+    font-size: 15px;
+    font-weight: 300;
+    cursor: pointer;
+    &:hover{
+        transition: background-color 300ms;
+    }
+
+}
+.primaryBtn{
+    background-color: $primary_color;
+    color: $white_color;
+    &:hover{
+        background-color: transparent;
+        color: black;
+        border: 1px solid $primary_color;
+    }
+
+}
+.secondaryBtn{
+    background-color:  $white_color;
+    color: black;
+    border: 1px solid $primary_color;
+    &:hover{
+        background-color:  $primary_color;;
+        color: $white_color;
+    }
+}

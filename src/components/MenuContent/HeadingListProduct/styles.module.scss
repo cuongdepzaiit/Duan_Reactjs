@@ -1,0 +1,12 @@
+@import '../../../assets/styles/variable.module';
+@import '../../../assets/styles/mixin.module';
+
+.container {
+    @include flex_box_custom(space-between,center, 80px);
+    
+}
+
+
+.containerItem {
+    @include flex_box_custom(center, center, 10px);
+}

@@ -1,0 +1,75 @@
+@import '@styles/mixin.module.scss';
+@import '@styles/variable.module.scss';
+
+.container {
+    @include flex_box_custom(center, center, 0px);
+    left: 0;
+    right: 0;
+}
+.topHeader{
+    position: absolute;
+    top: 0;
+}
+.fixedHeader {
+
+    position: fixed;
+    top: -83px;
+    background-color: #ffffffe6;
+    z-index: 999;
+    box-shadow: 2px 0px 12px 0px rgba(0, 0, 0, 0.15);
+    transform: translateY(83px);
+    backdrop-filter: blur(5px);
+    transition: transform 0.7s ease;
+}
+.menu {
+    cursor: pointer;
+    padding-top: 9px;
+    font-size: 17px;
+    color: $primary_color;
+}
+.containerHeader {
+    width: 1250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 83px;
+
+    gap: 0px;
+    padding: 18px;
+}
+
+.containeBoxIcon {
+    @include flex_box_custom(center, center, 15px);
+}
+
+.containeBox {
+    @include flex_box_custom(center, center, 30px);
+}
+// phần icon Face, insta, Youtube
+
+// Phần menu taksba 1
+.containeMenuOne {
+    @include flex_box_custom(center, center, 20px);
+}
+
+.BoxIcon {
+    @include radius_common(50%);
+    @include flex_box_custom(center, center, 0px);
+    background-color: $primary_color;
+    width: 26px;
+    height: 26px;
+}
+.menu::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: $primary_color;
+    transform-origin: right;
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 300ms, opacity 500ms;
+}
+.menu:hover::after {
+    transform: scale(1);
+    opacity: 1;
+}
